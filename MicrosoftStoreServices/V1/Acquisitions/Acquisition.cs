@@ -100,13 +100,13 @@ namespace MicrosoftStoreServices.V1.Acquisitions
         /// Gets the version of the Store where the acquisition occurred.
         /// </summary>
         [JsonProperty("purchasePriceUSDAmount")]
-        public int PurchasePriceUSDAmount { get; set; }
+        public double PurchasePriceUSDAmount { get; set; }
 
         /// <summary>
         /// Gets the version of the Store where the acquisition occurred.
         /// </summary>
         [JsonProperty("purchaseTaxUSDAmount")]
-        public int PurchaseTaxUSDAmount { get; set; }
+        public double PurchaseTaxUSDAmount { get; set; }
 
         /// <summary>
         /// Gets the version of the Store where the acquisition occurred.
@@ -166,13 +166,13 @@ namespace MicrosoftStoreServices.V1.Acquisitions
         /// Gets the version of the Store where the acquisition occurred.
         /// </summary>
         [JsonProperty("purchasePriceLocalAmount")]
-        public int PurchasePriceLocalAmount { get; set; }
+        public double PurchasePriceLocalAmount { get; set; }
 
         /// <summary>
         /// Gets the version of the Store where the acquisition occurred.
         /// </summary>
         [JsonProperty("purchaseTaxLocalAmount")]
-        public int PurchaseTaxLocalAmount { get; set; }
+        public double PurchaseTaxLocalAmount { get; set; }
 
     }
 }
