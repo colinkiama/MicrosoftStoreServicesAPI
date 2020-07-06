@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace WindowsStoreServices.OAuth
+namespace MicrosoftStoreServicesAPI.OAuth
 {
     internal class SecondsToTimeSpanConverter : JsonConverter
     {

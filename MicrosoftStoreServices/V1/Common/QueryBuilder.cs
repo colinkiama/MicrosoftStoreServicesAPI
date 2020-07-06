@@ -7,9 +7,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using WindowsStoreServices.OAuth;
+using MicrosoftStoreServicesAPI.OAuth;
 
-namespace WindowsStoreServices.V1.Common
+namespace MicrosoftStoreServicesAPI.V1.Common
 {
     /// <summary>
     /// Base Query Builder

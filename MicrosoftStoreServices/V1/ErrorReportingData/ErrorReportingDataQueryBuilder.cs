@@ -1,7 +1,7 @@
-﻿using WindowsStoreServices.OAuth;
-using WindowsStoreServices.V1.Common;
+﻿using MicrosoftStoreServicesAPI.OAuth;
+using MicrosoftStoreServicesAPI.V1.Common;
 
-namespace WindowsStoreServices.V1.ErrorReportingData
+namespace MicrosoftStoreServicesAPI.V1.ErrorReportingData
 {
     /// <summary>
     /// Query builder for error reporting data

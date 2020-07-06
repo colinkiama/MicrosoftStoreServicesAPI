@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace WindowsStoreServices.V1.ErrorReportingData
+namespace MicrosoftStoreServicesAPI.V1.ErrorReportingData
 {
     /// <summary>
     /// Fields eligible for OrderBy parameter in ErrorReportingData

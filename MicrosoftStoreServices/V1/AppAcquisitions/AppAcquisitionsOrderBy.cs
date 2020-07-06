@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace WindowsStoreServices.V1.AppAcquisitions
+namespace MicrosoftStoreServicesAPI.V1.AppAcquisitions
 {
     /// <summary>
     /// Possible fields to order the result data values for each acquisition. 

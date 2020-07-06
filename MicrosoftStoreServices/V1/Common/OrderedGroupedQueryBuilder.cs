@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WindowsStoreServices.OAuth;
+using MicrosoftStoreServicesAPI.OAuth;
 
-namespace WindowsStoreServices.V1.Common
+namespace MicrosoftStoreServicesAPI.V1.Common
 {
     public class OrderedGroupedQueryBuilder<TQueryBuilder, TQuery, TResult, TOrderBy, TGroupBy> : OrderedQueryBuilder<TQueryBuilder, TQuery, TResult, TOrderBy>
         where TQueryBuilder : OrderedQueryBuilder<TQueryBuilder, TQuery, TResult, TOrderBy>

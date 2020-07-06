@@ -1,7 +1,7 @@
-﻿using WindowsStoreServices.OAuth;
-using WindowsStoreServices.V1.Common;
+﻿using MicrosoftStoreServicesAPI.OAuth;
+using MicrosoftStoreServicesAPI.V1.Common;
 
-namespace WindowsStoreServices.V1.IapAcquisitions
+namespace MicrosoftStoreServicesAPI.V1.IapAcquisitions
 {
     /// <summary>
     /// Query builder for IAP acquisitions

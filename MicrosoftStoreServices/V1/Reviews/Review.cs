@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
-using WindowsStoreServices.V1.Common.Enums;
+using MicrosoftStoreServicesAPI.V1.Common.Enums;
 
-namespace WindowsStoreServices.V1.Reviews
+namespace MicrosoftStoreServicesAPI.V1.Reviews
 {
     /// <summary>
     /// Review data

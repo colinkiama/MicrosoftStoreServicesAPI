@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace WindowsStoreServices.V1.Common
+namespace MicrosoftStoreServicesAPI.V1.Common
 {
     /// <summary>
     /// Base ordered and grouped query

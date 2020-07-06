@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using WindowsStoreServices.OAuth;
-using WindowsStoreServices.V1.Common.Enums;
+using MicrosoftStoreServicesAPI.OAuth;
+using MicrosoftStoreServicesAPI.V1.Common.Enums;
 
-namespace WindowsStoreServices.V1.Common
+namespace MicrosoftStoreServicesAPI.V1.Common
 {
     public class OrderedQueryBuilder<TQueryBuilder, TQuery, TResult, TOrderBy> : QueryBuilder<TQueryBuilder, TQuery, TResult>
         where TQueryBuilder : QueryBuilder<TQueryBuilder, TQuery, TResult>

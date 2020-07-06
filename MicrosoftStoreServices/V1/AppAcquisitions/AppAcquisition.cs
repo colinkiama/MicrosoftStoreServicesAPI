@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
-using WindowsStoreServices.V1.Common.Enums;
+using MicrosoftStoreServicesAPI.V1.Common.Enums;
 
-namespace WindowsStoreServices.V1.AppAcquisitions
+namespace MicrosoftStoreServicesAPI.V1.AppAcquisitions
 {
     /// <summary>
     /// Acquisition data for an application

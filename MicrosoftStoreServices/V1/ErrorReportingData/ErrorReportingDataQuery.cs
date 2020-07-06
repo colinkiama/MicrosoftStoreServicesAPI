@@ -1,6 +1,6 @@
-﻿using WindowsStoreServices.V1.Common;
+﻿using MicrosoftStoreServicesAPI.V1.Common;
 
-namespace WindowsStoreServices.V1.ErrorReportingData
+namespace MicrosoftStoreServicesAPI.V1.ErrorReportingData
 {
     /// <summary>
     /// Query for Error reporting data

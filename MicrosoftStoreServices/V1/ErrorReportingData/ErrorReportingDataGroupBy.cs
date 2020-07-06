@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace WindowsStoreServices.V1.ErrorReportingData
+namespace MicrosoftStoreServicesAPI.V1.ErrorReportingData
 {
     /// <summary>
     /// Fields eligible for GroupBy parameter in ErrorReportingData

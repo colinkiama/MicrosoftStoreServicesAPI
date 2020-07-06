@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace WindowsStoreServices.V1.IapAcquisitions
+namespace MicrosoftStoreServicesAPI.V1.IapAcquisitions
 {
     /// <summary>
     /// Fields eligible for OrderBy parameters on IAP acquisitions

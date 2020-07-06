@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace WindowsStoreServices.OAuth
+namespace MicrosoftStoreServicesAPI.OAuth
 {
     /// <summary>
     /// 

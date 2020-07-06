@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace WindowsStoreServices.V1.ErrorReportingData
+namespace MicrosoftStoreServicesAPI.V1.ErrorReportingData
 {
     /// <summary>
     /// Type of the error event

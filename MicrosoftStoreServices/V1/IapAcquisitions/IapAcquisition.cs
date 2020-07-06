@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
-using WindowsStoreServices.V1.Common.Enums;
+using MicrosoftStoreServicesAPI.V1.Common.Enums;
 
-namespace WindowsStoreServices.V1.IapAcquisitions
+namespace MicrosoftStoreServicesAPI.V1.IapAcquisitions
 {
     /// <summary>
     /// Acquisition data for an in-app product (IAP)

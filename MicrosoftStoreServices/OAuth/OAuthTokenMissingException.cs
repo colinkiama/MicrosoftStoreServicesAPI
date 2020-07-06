@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WindowsStoreServices.OAuth
+namespace MicrosoftStoreServicesAPI.OAuth
 {
     public class OAuthTokenMissingException : Exception
     {

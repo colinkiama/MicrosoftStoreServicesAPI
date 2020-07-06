@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace WindowsStoreServices.OAuth
+namespace MicrosoftStoreServicesAPI.OAuth
 {
     internal class SecondsToDateTimeConverter : JsonConverter
     {

@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace WindowsStoreServices.V1.Common.Enums
+namespace MicrosoftStoreServicesAPI.V1.Common.Enums
 {
     /// <summary>
     /// Type of acquisition of the app/IAP

@@ -1,6 +1,6 @@
-# WindowsStoreServices
-You can query the Windows Store Services API (only Analytics API as of now) with WindowsStoreServices.
-It provides an easy and strongly-typed way to interact with data about your Windows Store apps.
+# MicrosoftStoreServices
+You can easily query the Microsoft Store Services API in C# with this package.
+It provides an easy and strongly-typed way to interact with data about your Microsoft Store products.
 
 Data you can get from this SDK are :
 - App acquisitions
@@ -15,18 +15,14 @@ If you encounter any bugs, please report it or feel free to participate on this 
 
 Prerequisites
 -------
-WindowsStoreServices SDK will require you to setup properly your Dev Center account with your Azure AD to authenticate you, otherwise you won't be allow to query for data.
+Microsoft Store Serivces API will require you to setup properly your Partner Center account with your Azure AD to authenticate you, otherwise you won't be allow to query for data.
 
-All the prerequisites needed for this SDK are under "Associate an Azure AD application with your Windows Dev Center account" : https://msdn.microsoft.com/en-us/windows/uwp/monetize/access-analytics-data-using-windows-store-services
-
+All the prerequisites required are explained here: in "Complete prerequisites for using the Microsoft Store analytics API : https://msdn.microsoft.com/en-us/windows/uwp/monetize/access-analytics-data-using-windows-store-services
+Important Tip: To make things easy, use the Azure Portal to create a new Azure AD app registration. You can then add the application to the "Users" page of your Partner Center Account Settings.
 
 How to install it
 -------
-A NuGet package of this SDK is available here : https://www.nuget.org/packages/WindowsStoreServices/
-
-It's a Portable Class Library that supports .NET Framework 4.5, Windows 8 up to 10, Windows Phone 8, ASP.NET Core 1.0 and Xamarin (Android and iOS).
-
-Otherwise, you can clone this repository.
+Package will be made when it's ready...
 
 
 How to get an OAuth token
@@ -35,7 +31,7 @@ Once all the prerequisites have been done, you will need to get an authenticatio
 
 Here's how to do it :
 ```csharp
-var oauthClient = new WindowsStoreServices.OAuth.OAuthClient();
+var oauthClient = new MicrosoftStoreServicesAPI.OAuth.OAuthClient();
 var token = await oauthClient.GetTokenAsync("{YOUR-AZURE-AD-TENANT-ID}",
                                             "{YOUR-AZURE-AD-APPLICATION-CLIENT-ID}",
                                             "{YOUR-AZURE-AD-APPLICATION-SECRETKEY}");

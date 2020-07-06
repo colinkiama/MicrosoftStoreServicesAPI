@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.Serialization;
 
-namespace WindowsStoreServices.V1.Common
+namespace MicrosoftStoreServicesAPI.V1.Common
 {
     /// <summary>
     /// Helper for Enums

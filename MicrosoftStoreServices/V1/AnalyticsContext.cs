@@ -1,13 +1,13 @@
 ﻿using System;
-using WindowsStoreServices.OAuth;
-using WindowsStoreServices.V1.AppAcquisitions;
-using WindowsStoreServices.V1.ApplicationList;
-using WindowsStoreServices.V1.ErrorReportingData;
-using WindowsStoreServices.V1.IapAcquisitions;
-using WindowsStoreServices.V1.Ratings;
-using WindowsStoreServices.V1.Reviews;
+using MicrosoftStoreServicesAPI.OAuth;
+using MicrosoftStoreServicesAPI.V1.AppAcquisitions;
+using MicrosoftStoreServicesAPI.V1.ApplicationList;
+using MicrosoftStoreServicesAPI.V1.ErrorReportingData;
+using MicrosoftStoreServicesAPI.V1.IapAcquisitions;
+using MicrosoftStoreServicesAPI.V1.Ratings;
+using MicrosoftStoreServicesAPI.V1.Reviews;
 
-namespace WindowsStoreServices.V1
+namespace MicrosoftStoreServicesAPI.V1
 {
     /// <summary>
     /// Data context for the Analytics API

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace WindowsStoreServices.V1.Common
+namespace MicrosoftStoreServicesAPI.V1.Common
 {
     public class Response<T>
     {

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
-using WindowsStoreServices.V1.Common;
+using MicrosoftStoreServicesAPI.V1.Common;
 
-namespace WindowsStoreServices.V1.IapAcquisitions
+namespace MicrosoftStoreServicesAPI.V1.IapAcquisitions
 {
     /// <summary>
     /// Query for IAP acquisition

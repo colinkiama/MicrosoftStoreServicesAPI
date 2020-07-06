@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace WindowsStoreServices.V1.Ratings
+namespace MicrosoftStoreServicesAPI.V1.Ratings
 {
     /// <summary>
     /// Fields eligible for OrderBy on ratings

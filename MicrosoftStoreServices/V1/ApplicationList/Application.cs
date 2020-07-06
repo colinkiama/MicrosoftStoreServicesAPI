@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace WindowsStoreServices.V1.ApplicationList
+namespace MicrosoftStoreServicesAPI.V1.ApplicationList
 {
     /// <summary>
     /// Application

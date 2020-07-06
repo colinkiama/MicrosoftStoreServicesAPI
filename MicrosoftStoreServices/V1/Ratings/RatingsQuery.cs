@@ -1,6 +1,6 @@
-﻿using WindowsStoreServices.V1.Common;
+﻿using MicrosoftStoreServicesAPI.V1.Common;
 
-namespace WindowsStoreServices.V1.Ratings
+namespace MicrosoftStoreServicesAPI.V1.Ratings
 {
     /// <summary>
     /// Query for ratings
