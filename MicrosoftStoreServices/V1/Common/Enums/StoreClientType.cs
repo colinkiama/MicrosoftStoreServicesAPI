@@ -16,17 +16,31 @@ namespace MicrosoftStoreServicesAPI.V1.Common.Enums
         [EnumMember(Value = "Windows Phone Store (client)")]
         WindowsPhoneStoreClient,
 
+
+        /// <summary>
+        /// Windows Store app
+        /// </summary>
+        [EnumMember(Value = "Microsoft Store (client)")]
+        MicrosoftStoreClient,
+
         /// <summary>
         /// Windows Store app
         /// </summary>
         [EnumMember(Value = "Windows Store (client)")]
-        WindowsStoreClient,
+        WindowsStoreClient = MicrosoftStoreClient,
+
+
+        /// <summary>
+        /// Windows Store website
+        /// </summary>
+        [EnumMember(Value = "Microsoft Store (web)")]
+        MicrosoftStoreWeb,
 
         /// <summary>
         /// Windows Store website
         /// </summary>
         [EnumMember(Value = "Windows Store (web)")]
-        WindowsStoreWeb,
+        WindowsStoreWeb = MicrosoftStoreWeb,
 
         /// <summary>
         /// Volume purchase
