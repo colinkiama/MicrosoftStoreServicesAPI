@@ -128,12 +128,6 @@ namespace MicrosoftStoreServicesAPI.V1
             if (_token == null)
                 throw new OAuthTokenMissingException();
         }
-
-        public object AppAcquisitions(object applicationId)
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
     }
 }
