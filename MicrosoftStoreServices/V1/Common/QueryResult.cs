@@ -13,7 +13,7 @@ namespace MicrosoftStoreServices.V1.Common
     {
         public string NextPageUrl { get; set; }
         public string QueryBaseUrl { get; set; }
-        public ICollection<T> Results { get; set; }
+        public IList<T> Results { get; set; }
 
         public int TotalCount { get; set; }
 
@@ -22,7 +22,7 @@ namespace MicrosoftStoreServices.V1.Common
 
         }
 
-        public QueryResult(ICollection<T> results, string nextPageUrl, string queryBaseUrl, int totalCount)
+        public QueryResult(IList<T> results, string nextPageUrl, string queryBaseUrl, int totalCount)
         {
             Results = results;
             NextPageUrl = nextPageUrl;
@@ -30,43 +30,43 @@ namespace MicrosoftStoreServices.V1.Common
             TotalCount = totalCount;
         }
 
-        public async Task<bool> LoadNextPageAsync(OAuthToken oAuthToken)
-        {
-            bool wasNextPageLoaded = false;
-            bool isThereANextPage = !string.IsNullOrEmpty(QueryBaseUrl);
+        //public async Task<bool> LoadNextPageAsync(OAuthToken oAuthToken)
+        //{
+        //    bool wasNextPageLoaded = false;
+        //    //bool isThereANextPage = !string.IsNullOrEmpty(QueryBaseUrl);
 
-            if (isThereANextPage)
-            {
-                if (oAuthToken.HasExpired)
-                {
-                    // Handle token expiry
-                }
-                if (CheckIfHttpClientAuthHeaderIsNotFilled())
-                {
-                    Client.HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oAuthToken.TokenType, oAuthToken.AccessToken);
-                }
+        //    //if (isThereANextPage)
+        //    //{
+        //    //    if (oAuthToken.HasExpired)
+        //    //    {
+        //    //        // Handle token expiry
+        //    //    }
+        //    //    if (CheckIfHttpClientAuthHeaderIsNotFilled())
+        //    //    {
+        //    //        //Client.HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oAuthToken.TokenType, oAuthToken.AccessToken);
+        //    //    }
 
 
 
-                var uri = new Uri($"{QueryBaseUrl}/{NextPageUrl}");
-                var httpResponse = await Client.HttpClient.GetAsync(uri);
-                var json = await httpResponse.Content.ReadAsStringAsync();
+        //    //    var uri = new Uri($"{QueryBaseUrl}/{NextPageUrl}");
+        //    //    var httpResponse = await Client.HttpClient.GetAsync(uri);
+        //    //    var json = await httpResponse.Content.ReadAsStringAsync();
 
-                var response = JsonConvert.DeserializeObject<Response<T>>(json);
-                foreach (var item in response.Values)
-                {
-                    Results.Add(item);
-                }
+        //    //    var response = JsonConvert.DeserializeObject<Response<T>>(json);
+        //    //    foreach (var item in response.Values)
+        //    //    {
+        //    //        Results.Add(item);
+        //    //    }
                 
-                NextPageUrl = !string.IsNullOrEmpty(response.NextLink) ? response.NextLink : null;
-                wasNextPageLoaded = true;
-            }
-            return wasNextPageLoaded;
-        }
+        //    //    NextPageUrl = !string.IsNullOrEmpty(response.NextLink) ? response.NextLink : null;
+        //    //    wasNextPageLoaded = true;
+        //    //}
+        //    return wasNextPageLoaded;
+        //}
 
-        private bool CheckIfHttpClientAuthHeaderIsNotFilled()
-        {
-            return Client.HttpClient.DefaultRequestHeaders.Authorization == null;
-        }
+        //private bool CheckIfHttpClientAuthHeaderIsNotFilled()
+        //{
+        //    return Client.HttpClient.DefaultRequestHeaders.Authorization == null;
+        //}
     }
 }

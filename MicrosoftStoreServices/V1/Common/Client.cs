@@ -7,6 +7,6 @@ namespace MicrosoftStoreServices.V1.Common
 {
     internal class Client
     {
-        internal static HttpClient HttpClient = new HttpClient();
+        //internal static HttpClient HttpClient = new HttpClient();
     }
 }

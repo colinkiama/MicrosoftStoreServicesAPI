@@ -93,15 +93,12 @@ namespace MicrosoftStoreServicesAPI.V1.Common
         // New version
         public async Task<QueryResult<TResult>> GetResultsAsync()
         {
-            if (CheckIfHttpClientAuthHeaderNeedsToBeUpdated())
-            {
-                Client.HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(OAuthToken.TokenType, OAuthToken.AccessToken);
-            }
-
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(OAuthToken.TokenType, OAuthToken.AccessToken);
             var url = Query.GetUrl();
 
             var uri = new Uri($"{BaseUrl}/{url}");
-            var httpResponse = await Client.HttpClient.GetAsync(uri);
+            var httpResponse = await httpClient.GetAsync(uri);
             var json = await httpResponse.Content.ReadAsStringAsync();
 
             var response = JsonConvert.DeserializeObject<Response<TResult>>(json);
@@ -110,10 +107,7 @@ namespace MicrosoftStoreServicesAPI.V1.Common
             return queryResult;
         }
 
-        private bool CheckIfHttpClientAuthHeaderNeedsToBeUpdated()
-        {
-            return Client.HttpClient.DefaultRequestHeaders.Authorization == null;
-        }
+       
 
         #endregion
     }
