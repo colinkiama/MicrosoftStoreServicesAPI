@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MicrosoftStoreServices.V1;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace WindowsStoreServices.V1.Common
     /// </summary>
     public abstract class QueryBuilder
     {
-    
+
     }
 
     /// <summary>
@@ -29,6 +30,7 @@ namespace WindowsStoreServices.V1.Common
     {
         private const string BaseUrl = "https://manage.devcenter.microsoft.com/v1.0/my/analytics";
 
+
         #region Constructor
 
         /// <summary>
@@ -39,7 +41,7 @@ namespace WindowsStoreServices.V1.Common
         {
             OAuthToken = oauthToken;
             Query = new TQuery();
-        } 
+        }
 
         #endregion
 
@@ -61,17 +63,19 @@ namespace WindowsStoreServices.V1.Common
 
         public async Task<IEnumerable<TResult>> GetResultsAsync()
         {
-            var httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(OAuthToken.TokenType, OAuthToken.AccessToken);
+            if (CheckIfHttpClientAuthHeaderNeedsToBeUpdated())
+            {
+                Client.HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(OAuthToken.TokenType, OAuthToken.AccessToken);
+            }
 
             var url = Query.GetUrl();
             var results = new List<TResult>();
             do
             {
                 var uri = new Uri($"{BaseUrl}/{url}");
-                var httpResponse = await httpClient.GetAsync(uri);
+                var httpResponse = await Client.HttpClient.GetAsync(uri);
                 var json = await httpResponse.Content.ReadAsStringAsync();
-                
+
                 var response = JsonConvert.DeserializeObject<Response<TResult>>(json);
                 results.AddRange(response.Values);
 
@@ -80,6 +84,12 @@ namespace WindowsStoreServices.V1.Common
             while (!string.IsNullOrEmpty(url));
 
             return results.AsEnumerable();
+        }
+
+        private bool CheckIfHttpClientAuthHeaderNeedsToBeUpdated()
+        {
+            bool isTokenOld = DateTime.UtcNow > OAuthToken.ExpiresOn;
+            return isTokenOld || Client.HttpClient.DefaultRequestHeaders.Authorization == null;
         }
 
         #endregion
