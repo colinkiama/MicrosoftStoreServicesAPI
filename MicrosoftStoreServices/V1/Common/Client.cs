@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 
-namespace MicrosoftStoreServices.V1
+namespace MicrosoftStoreServices.V1.Common
 {
     internal class Client
     {

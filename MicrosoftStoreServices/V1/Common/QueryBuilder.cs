@@ -1,4 +1,5 @@
 ﻿using MicrosoftStoreServices.V1;
+using MicrosoftStoreServices.V1.Common;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
