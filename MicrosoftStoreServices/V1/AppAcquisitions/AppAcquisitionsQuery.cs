@@ -11,5 +11,10 @@ namespace MicrosoftStoreServicesAPI.V1.AppAcquisitions
         /// Gets the URL of the query
         /// </summary>
         public override string QueryName => "appacquisitions";
+        public AppAcquisitionsQuery()
+        {
+           
+        }
+        
     }
 }

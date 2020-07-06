@@ -25,5 +25,7 @@ namespace MicrosoftStoreServicesAPI.OAuth
 
         [JsonProperty("token_type")]
         public string TokenType { get; set; }
+
+        public bool HasExpired => DateTime.UtcNow > ExpiresOn;
     }
 }

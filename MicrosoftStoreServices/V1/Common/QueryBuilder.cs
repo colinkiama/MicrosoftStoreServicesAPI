@@ -11,6 +11,9 @@ using MicrosoftStoreServicesAPI.OAuth;
 
 namespace MicrosoftStoreServicesAPI.V1.Common
 {
+
+
+
     /// <summary>
     /// Base Query Builder
     /// </summary>
@@ -62,7 +65,33 @@ namespace MicrosoftStoreServicesAPI.V1.Common
 
         #region Methods
 
-        public async Task<IEnumerable<TResult>> GetResultsAsync()
+        //public async Task<IEnumerable<TResult>> GetResultsAsync()
+        //{
+        //    if (CheckIfHttpClientAuthHeaderNeedsToBeUpdated())
+        //    {
+        //        Client.HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(OAuthToken.TokenType, OAuthToken.AccessToken);
+        //    }
+
+        //    var url = Query.GetUrl();
+        //    var results = new List<TResult>();
+        //    do
+        //    {
+        //        var uri = new Uri($"{BaseUrl}/{url}");
+        //        var httpResponse = await Client.HttpClient.GetAsync(uri);
+        //        var json = await httpResponse.Content.ReadAsStringAsync();
+
+        //        var response = JsonConvert.DeserializeObject<Response<TResult>>(json);
+        //        results.AddRange(response.Values);
+
+        //        url = !string.IsNullOrEmpty(response.NextLink) ? response.NextLink : null;
+        //    }
+        //    while (!string.IsNullOrEmpty(url));
+
+        //    return results.AsEnumerable();
+        //}
+
+        // New version
+        public async Task<QueryResult<TResult>> GetResultsAsync()
         {
             if (CheckIfHttpClientAuthHeaderNeedsToBeUpdated())
             {
@@ -70,27 +99,20 @@ namespace MicrosoftStoreServicesAPI.V1.Common
             }
 
             var url = Query.GetUrl();
-            var results = new List<TResult>();
-            do
-            {
-                var uri = new Uri($"{BaseUrl}/{url}");
-                var httpResponse = await Client.HttpClient.GetAsync(uri);
-                var json = await httpResponse.Content.ReadAsStringAsync();
 
-                var response = JsonConvert.DeserializeObject<Response<TResult>>(json);
-                results.AddRange(response.Values);
+            var uri = new Uri($"{BaseUrl}/{url}");
+            var httpResponse = await Client.HttpClient.GetAsync(uri);
+            var json = await httpResponse.Content.ReadAsStringAsync();
 
-                url = !string.IsNullOrEmpty(response.NextLink) ? response.NextLink : null;
-            }
-            while (!string.IsNullOrEmpty(url));
-
-            return results.AsEnumerable();
+            var response = JsonConvert.DeserializeObject<Response<TResult>>(json);
+            string nextPageUrl = !string.IsNullOrEmpty(response.NextLink) ? response.NextLink : null;
+            QueryResult<TResult> queryResult = new QueryResult<TResult>(response.Values, nextPageUrl, BaseUrl, response.TotalCount);
+            return queryResult;
         }
 
         private bool CheckIfHttpClientAuthHeaderNeedsToBeUpdated()
         {
-            bool isTokenOld = DateTime.UtcNow > OAuthToken.ExpiresOn;
-            return isTokenOld || Client.HttpClient.DefaultRequestHeaders.Authorization == null;
+            return Client.HttpClient.DefaultRequestHeaders.Authorization == null;
         }
 
         #endregion

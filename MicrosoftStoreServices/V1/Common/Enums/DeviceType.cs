@@ -17,16 +17,22 @@ namespace MicrosoftStoreServicesAPI.V1.Common.Enums
         PC,
 
         /// <summary>
-        /// Tablet
-        /// </summary>
-        [EnumMember(Value = "Tablet")]
-        Tablet,
-
-        /// <summary>
         /// Phone
         /// </summary>
         [EnumMember(Value = "Phone")]
         Phone,
+
+        /// <summary>
+        /// Xbox One
+        /// </summary>
+        [EnumMember(Value = "Console-Xbox One")]
+        XboxOne,
+
+        /// <summary>
+        /// Xbox Series X
+        /// </summary>
+        [EnumMember(Value = "Console-Xbox Series X")]
+        XboxSeriesX,
 
         /// <summary>
         /// IoT
@@ -35,33 +41,27 @@ namespace MicrosoftStoreServicesAPI.V1.Common.Enums
         IoT,
 
         /// <summary>
-        /// Wearable
-        /// </summary>
-        [EnumMember(Value = "Wearable")]
-        Wearable,
-
-        /// <summary>
         /// Server
         /// </summary>
         [EnumMember(Value = "Server")]
         Server,
 
         /// <summary>
-        /// Collaborative
+        /// Tablet
         /// </summary>
-        [EnumMember(Value = "Collaborative")]
-        Collaborative,
+        [EnumMember(Value = "Tablet")]
+        Tablet,
 
         /// <summary>
-        /// Other
+        /// Holographic
         /// </summary>
-        [EnumMember(Value = "Other")]
-        Other,
+        [EnumMember(Value = "Holographic")]
+        Holographic,
 
         /// <summary>
         /// Unknown
         /// </summary>
-        [EnumMember(Value = "")]
+        [EnumMember(Value = "Unknown")]
         Unknown
     }
 }
