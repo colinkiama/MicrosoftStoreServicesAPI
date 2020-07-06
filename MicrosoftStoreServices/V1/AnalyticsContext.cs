@@ -1,4 +1,5 @@
 ﻿using System;
+using MicrosoftStoreServices.V1.Acquisitions;
 using MicrosoftStoreServicesAPI.OAuth;
 using MicrosoftStoreServicesAPI.V1.AppAcquisitions;
 using MicrosoftStoreServicesAPI.V1.ApplicationList;
@@ -65,6 +66,18 @@ namespace MicrosoftStoreServicesAPI.V1
             CheckOAuthToken();
             return new AppAcquisitionsQueryBuilder(_token, applicationId);
         }
+
+        /// <summary>
+        /// Get an aggregate acquisition data for an application during a given date range and other optional filters.
+        /// </summary>
+        /// <param name="applicationId">The product ID of the app for which you want to retrieve acquisition data.</param>
+        /// <returns>An instance of <see cref="AppAcquisitionsQueryBuilder"/> to build the query</returns>
+        public AcquisitionsQueryBuilder Acquisitions(string applicationId)
+        {
+            CheckOAuthToken();
+            return new AcquisitionsQueryBuilder(_token, applicationId);
+        }
+
 
         /// <summary>
         /// Get all applications associated to the authentified account.
