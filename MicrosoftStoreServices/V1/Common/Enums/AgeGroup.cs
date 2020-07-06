@@ -13,7 +13,7 @@ namespace MicrosoftStoreServicesAPI.V1.Common.Enums
         /// <summary>
         /// The user is less than 13 years old
         /// </summary>
-        [EnumMember(Value = "less than 13")]
+        [EnumMember(Value = "Less than 13")]
         LessThan13,
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace MicrosoftStoreServicesAPI.V1.Common.Enums
         /// <summary>
         /// The user is older than 55 years old
         /// </summary>
-        [EnumMember(Value = "greater than 55")]
+        [EnumMember(Value = "Greater than 55")]
         GreaterThan55,
 
         /// <summary>

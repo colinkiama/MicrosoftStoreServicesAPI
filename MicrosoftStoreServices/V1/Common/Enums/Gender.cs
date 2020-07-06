@@ -11,7 +11,7 @@ namespace MicrosoftStoreServicesAPI.V1.Common.Enums
     public enum Gender
     {
         /// <summary>
-        /// Nale
+        /// Male
         /// </summary>
         [EnumMember(Value = "m")]
         Male,
