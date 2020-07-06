@@ -8,7 +8,7 @@ namespace MicrosoftStoreServicesAPI.V1.Common.Enums
     /// Age group
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum AgeGroup
+    public enum Age
     {
         /// <summary>
         /// The user is less than 13 years old

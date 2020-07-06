@@ -81,7 +81,7 @@ namespace MicrosoftStoreServicesAPI.V1.IapAcquisitions
         /// Gets the age group of the user who made the acquisition.
         /// </summary>
         [JsonProperty("ageGroup")]
-        public AgeGroup AgeGroup { get; set; }
+        public Age AgeGroup { get; set; }
 
         /// <summary>
         /// Gets the type of acquisition (free, paid, and so on).

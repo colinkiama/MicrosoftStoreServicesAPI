@@ -39,7 +39,7 @@ namespace MicrosoftStoreServices.V1.Acquisitions
         /// Gets the age group of the user who made the acquisition.
         /// </summary>
         [JsonProperty("age")]
-        public AgeGroup AgeGroup { get; set; }
+        public Age Age { get; set; }
 
         /// <summary>
         /// Gets the type of device that completed the acquisition.
