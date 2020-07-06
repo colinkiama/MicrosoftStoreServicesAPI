@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsStoreServices", "WindowsStoreServices\WindowsStoreServices.csproj", "{CA3E81B8-B5A7-4A6F-A419-785C397EBFE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftStoreServices", "MicrosoftStoreServices\MicrosoftStoreServices.csproj", "{F68468BC-7818-495D-A32F-2EDF656FBE7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{CA3E81B8-B5A7-4A6F-A419-785C397EBFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA3E81B8-B5A7-4A6F-A419-785C397EBFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA3E81B8-B5A7-4A6F-A419-785C397EBFE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F68468BC-7818-495D-A32F-2EDF656FBE7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68468BC-7818-495D-A32F-2EDF656FBE7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68468BC-7818-495D-A32F-2EDF656FBE7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68468BC-7818-495D-A32F-2EDF656FBE7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1148EFC6-CD8D-430A-90BC-DFC1C249B27F}
 	EndGlobalSection
 EndGlobal
