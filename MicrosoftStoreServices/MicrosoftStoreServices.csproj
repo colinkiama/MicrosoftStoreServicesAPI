@@ -2,10 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>MicrosoftStoreServicesAPI.Net</PackageId>
+    <Description>
+    You can easily query the Microsoft Store Services API in C#
+    </Description>
+    <PackageVersion>0.3.0</PackageVersion>
+    <Authors>colinkiama</Authors>
+    <Title>Microsoft Store Services API</Title>
+    <Copyright>Colin Kiama 2020 </Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <RepositoryUrl>
+      https://www.github.com/colinkiama/MicrosoftStoreServicesAPI
+    </RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <None Include="../LICENSE.md" Pack="true" PackagePath="$(PackageLicenseFile)"/>
   </ItemGroup>
 
 </Project>

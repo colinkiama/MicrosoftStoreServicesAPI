@@ -1,6 +1,6 @@
 # MicrosoftStoreServices
 You can easily query the Microsoft Store Services API in C# with this package.
-It provides an easy and strongly-typed way to interact with data about your Microsoft Store products.
+This provides an easy and strongly-typed way to interact with data about your Microsoft Store products.
 
 Data you can get from this SDK are :
 - App acquisitions
@@ -22,7 +22,7 @@ Important Tip: To make things easy, use the Azure Portal to create a new Azure A
 
 How to install it
 -------
-Package will be made when it's ready...
+Package is available here: [MicrosoftStoreServicesAPI.net Nuget Package](https://www.nuget.org/packages/MicrosoftStoreServicesAPI.Net/)
 
 
 How to get an OAuth token
