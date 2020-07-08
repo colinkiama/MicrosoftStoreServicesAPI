@@ -6,7 +6,7 @@
     <Description>
     You can easily query the Microsoft Store Services API in C#
     </Description>
-    <PackageVersion>0.3.0</PackageVersion>
+    <PackageVersion>0.3.1</PackageVersion>
     <Authors>colinkiama</Authors>
     <Title>Microsoft Store Services API</Title>
     <Copyright>Colin Kiama 2020 </Copyright>
@@ -19,7 +19,8 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <None Include="../LICENSE.md" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+    <None Include="../LICENSE.md" Pack="true" PackagePath="$(PackageLicenseFile)" />
   </ItemGroup>
+
 
 </Project>

@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using MicrosoftStoreServicesAPI.OAuth;
+using System.Diagnostics;
 
 namespace MicrosoftStoreServicesAPI.V1.Common
 {
@@ -102,6 +103,7 @@ namespace MicrosoftStoreServicesAPI.V1.Common
             var json = await httpResponse.Content.ReadAsStringAsync();
 
             var response = JsonConvert.DeserializeObject<Response<TResult>>(json);
+            Debug.WriteLine(response);
             string nextPageUrl = !string.IsNullOrEmpty(response.NextLink) ? response.NextLink : null;
             QueryResult<TResult> queryResult = new QueryResult<TResult>(response.Values, nextPageUrl, BaseUrl, response.TotalCount);
             return queryResult;
